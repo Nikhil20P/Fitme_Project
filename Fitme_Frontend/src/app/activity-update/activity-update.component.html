@@ -1,0 +1,19 @@
+<br>
+<fieldset><legend style="font-size: 20px">EDIT ACTIVITY</legend>
+<form class="create-membership-body">
+   
+    <div fxLayout="row wrap" fxLayoutGap="1.5em" style="margin-left: 1.5em;">
+    
+        <mat-form-field class="create-membership-body-input" appearance="outline"  fxFlex="30">
+            <mat-label style="color: black;">Day</mat-label>
+            <input matInput required  [(ngModel)]="activityCredential.day" [ngModelOptions]="{standalone: true}" placeholder="ENTER DAY" minlength="4" pattern="^[A-Za-z_ ]*" > 
+        </mat-form-field>
+        <mat-form-field class="create-membership-body-input" appearance="outline"  fxFlex="30">
+            <mat-label style="color: black;">WorkOuts</mat-label>
+            <input matInput  required  [(ngModel)]="activityCredential.workouts" [ngModelOptions]="{standalone: true}" placeholder="ENTER WORKOUT" minlength="4" maxlength="" pattern="^(0|[1-9][0-9])$" >
+        </mat-form-field>
+    </div>
+    <div style="margin-left: 1.5em;"><button mat-flat-button  class="registration-button" style="color: green;" (click)="onCreate(activityCredential.id)" >REGISTER</button> &nbsp;&nbsp;
+    <button mat-flat-button  class="registration-button" style="color: tomato;" (click)="close()"> CANCEL</button></div>
+</form>
+</fieldset>

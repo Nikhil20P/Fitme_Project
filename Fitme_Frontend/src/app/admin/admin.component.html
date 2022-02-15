@@ -1,0 +1,15 @@
+<div fxLayoutAlign="center center" fxFlexFill class="mai-div" id="sect1">      
+  <mat-card fxFlex="25">
+      <mat-toolbar color="primary" class="">Admin Login </mat-toolbar>
+      <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+          <mat-form-field >
+            <input matInput required  [(ngModel)]="adminCredential.adminName"placeholder="Enter UserName" name="adminName">
+          </mat-form-field>
+        
+          <mat-form-field >
+              <input matInput required  matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="adminCredential.adminPassword" placeholder="Enter Password" name="adminPass">
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="button" (click)="onLogin()" >Login</button>
+        </form>
+  </mat-card>
+</div> 

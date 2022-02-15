@@ -1,0 +1,127 @@
+ <form action="" class="background">
+     <br>
+     <br>
+     <br>
+   
+    <h1 class="page" style="color: orange; text-align: center;">[Create Member]</h1>
+    <br><br>
+<div>
+    
+    <mat-form-field class="name" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Name</mat-label>
+        <input matInput type="text" required [(ngModel)]="memberCredential.name" [ngModelOptions]="{standalone: true}" ngth="4" placeholder="Name">  
+    </mat-form-field>
+
+
+    <mat-form-field class="email" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">email</mat-label>
+        <input matInput type="email" required  [(ngModel)]="memberCredential.email" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="email">  
+    </mat-form-field>
+
+    <mat-form-field class="contact" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Contact</mat-label>
+        <input matInput type="number" required   [(ngModel)]="memberCredential.mobileNumber" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="contact">  
+    </mat-form-field>
+  
+
+  
+</div>
+<div>
+    <mat-form-field class="gender" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">gender</mat-label>
+        <input matInput type="text" required [(ngModel)]="memberCredential.gender" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="gender">  
+    </mat-form-field>
+
+    <mat-form-field class="height" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">height</mat-label>
+        <input matInput type="number" required [(ngModel)]="memberCredential.height" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="height">  
+    </mat-form-field>
+    
+    <mat-form-field class="weight" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">weight</mat-label>
+        <input matInput type="number" required  [(ngModel)]="memberCredential.weight" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="weight">  
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field class="age" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">age</mat-label>
+        <input matInput type="number" required [(ngModel)]="memberCredential.age" [ngModelOptions]="{standalone: true}" ngth="4" placeholder="age">  
+    </mat-form-field>
+    
+    <mat-form-field class="joiningDate" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">joiningDate</mat-label>
+        <input matInput type="date" value="yyyy-dd-mm" required  [(ngModel)]="memberCredential.joiningDate" [ngModelOptions]="{standalone: true}"  ngth="4" placeholder="joiningDate">  
+    </mat-form-field>
+    
+    <!-- <mat-form-field class="status" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">status</mat-label>
+        <input matInput type="datetime" required ngth="4" pattern="^[A-Za-z_ ]*" placeholder="status">  
+    </mat-form-field> -->
+
+    <mat-form-field class="status" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Status</mat-label>
+        <mat-select required [(ngModel)]="memberCredential.status" [ngModelOptions]="{standalone: true}">
+            <mat-option value="Active">Active</mat-option>
+            <mat-option value="DeActive">DeActive</mat-option>
+          </mat-select>
+    </mat-form-field>
+
+    
+
+
+</div>
+<div>
+    <!-- <mat-form-field class="gymplan" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">gymplan</mat-label>
+        <input matInput type="text" required ngth="4" pattern="^[A-Za-z_ ]*" placeholder="gymplan">  
+    </mat-form-field> -->
+
+
+    <!-- <mat-form-field class="gymplan" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">gymplan</mat-label>
+        <mat-select [(ngModel)]="memberCredential.GymPlan"  [ngModelOptions]="{standalone: true}">
+            <mat-option *ngFor="let GymPlan of ELEMENT_DATA" [value]="GymPlan">
+            {{GymPlan.name}}
+            </mat-option>
+          </mat-select>
+
+    </mat-form-field> -->
+
+
+
+    <mat-form-field class="gymplan"  appearance="outline" fxFlex="30">
+        <mat-label style="color: black;">GymPlan</mat-label>
+        <input matInput type="text" required [(ngModel)]="memberCredential.gymplan" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="gymplan">  
+    </mat-form-field>
+
+
+
+    <!-- <mat-form-field class="gymplan" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">gymplan</mat-label>
+        <mat-select required [(ngModel)]="memberCredential.gymplan" [ngModelOptions]="{standalone: true}">
+            <mat-option value="Silver">Silver</mat-option>
+            <mat-option value="Gold">Gold</mat-option>
+            <mat-option value="Diamond">Diamond</mat-option>
+          </mat-select>
+    </mat-form-field> -->
+
+
+
+    <mat-form-field class="address" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">address</mat-label>
+        <input matInput type="text" required [(ngModel)]="memberCredential.address" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="address">  
+    </mat-form-field>
+
+    
+    <button mat-flat-button  class="registration-button" (click)="onCreate()" >REGISTER</button>
+    
+    
+   
+  
+   
+</div> 
+<div> <br><br><h2 style="color: orange;">This is Registration page</h2><br><br></div>
+<div>
+
+</div>
+</form> 
